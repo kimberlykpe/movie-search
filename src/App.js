@@ -1,18 +1,12 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import SearchIcon from './search.svg';
+import SearchIcon from './images/search.png';
 import MovieCard from './MovieCard';
 //4d2b405a
 
 const API_URL = 'http://www.omdbapi.com?apikey=4d2b405a';
 
-const movie1 = {
-  "Title": "Amazing Spiderman Syndrome",
-  "Year": "2012",
-  "imdbID": "tt2586634",
-  "Type": "movie",
-  "Poster": "N/A"
-}
+
 const App = () => {
   const [movies, setMovies] = useState([]);
 
@@ -26,7 +20,7 @@ const App = () => {
     setMovies(data.Search);
   }
   useEffect (() => {
-      searchMovies('Spiderman');
+      searchMovies('');
   }, [])
 
   return (
